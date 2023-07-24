@@ -1,0 +1,156 @@
+/* color space 기준 : #DBDBDB */
+
+/* 전체 */
+
+@font-face {
+    font-family: 'Binggrae-Two';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    margin: 0 auto;
+    background-color: #DBDBDB;
+    
+}
+#body-area{
+    padding: 50px;
+    text-align: center;
+}
+#main{
+    display: inline-block;
+    width: 70%;
+}
+hr{
+    margin: 30px 0px;
+    height: 3px;
+    background-color: #343434;
+}
+
+/* 홈 버튼 */
+
+#homeArea{
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    padding: 10px;
+    font-size: 25px;
+}
+#homeArea a i{
+    color: #E5F4F4;
+}
+#homeArea a i:hover{
+    color: #3B9092;
+}
+
+/* 스크롤 버튼 */
+
+#buttonArea{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    text-align: center;
+}
+#scroll-up, #scroll-down{
+    margin: 5px 0px;
+    font-size: 30px;
+    color: #E5F4F4;
+}
+#scroll-up:hover, #scroll-down:hover{
+    cursor: pointer;
+    color: #3B9092;
+}
+
+/* 제목 */
+
+#home-title-div{
+    padding: 30px 0px;
+    background-color: #343434;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 50px;
+    font-family: 'Binggrae-Two';
+    color: #DBDBDB;
+}
+
+/* 포트폴리오 사이트 */
+
+#mypages{
+    width: 100%;
+    vertical-align: top;
+    overflow: hidden;
+    font-family: 'Binggrae-Two';
+}
+#mypages div{
+    height: 130px;
+    vertical-align: middle;
+    padding: 0px 50px;
+}
+#mypages div a{
+    text-decoration: none;
+    color: #343434;
+    font-size: 60px;
+}
+#mypages div a:hover{
+    font-size: 90px;
+    transition: 0.3s ease-out;
+}
+
+/* 게시물 검색 */
+
+#search-box{
+    width: 100%;
+    vertical-align: top;
+}
+#search-bar{
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: 'Binggrae-Two';
+}
+#search-bar h2{
+    text-transform: uppercase;
+}
+#value{
+    margin-bottom: 10px;
+    border: none;
+    text-align: center;
+    padding: 5px;
+    background-color: #FAF8FF;
+    font-size: 18px;
+}
+#value:focus{
+    outline: none;
+}
+#container{
+    border: 2px solid #343434;
+    background-color: white;
+    font-family: 'Pretendard-Regular';
+}
+.item{
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    border-bottom: 1px dashed #343434;
+}
+.item:hover{
+    background-color: #D8ECEC;
+}
+.item a{
+    text-decoration: none;
+    color: black;
+}
+.name{
+    height: 200px;
+    overflow: hidden;
+    text-align: justify;
+    vertical-align: top;
+}
+
+/* 하단 */
+
+#footer{
+    padding: 100px 0px 20px 0px;
+    font-family: 'Binggrae-Two';
+}

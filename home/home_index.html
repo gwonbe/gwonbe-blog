@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>GWONBE</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="home_style.css">
+    <script src="https://kit.fontawesome.com/26cf5b99b8.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 상단 -->
+
+    <div id="homeArea">
+        <a href="../index.html">
+            <i class="fa-solid fa-house-user"></i>
+        </a>
+    </div>
+
+    <!-- 스크롤 버튼 -->
+    
+    <div id="buttonArea">
+        <i id="scroll-up"class="fa-solid fa-circle-up"></i>
+        <i id="scroll-down" class="fa-solid fa-circle-down"></i>
+    </div>
+
+    <!-- 상단 아이콘 제외 body 전체 영역 -->
+
+    <div id="body-area">
+
+        <section id="main">
+
+            <!-- 제목 -->
+
+            <div id="home-title-div">
+                <strong>GWONBE's BLOG</strong>
+            </div>
+
+            <hr>
+            
+            <!-- 포트폴리오 사이트 -->
+            
+            <div id="mypages">
+                <h2>My Pages</h2>
+                <div>
+                    <a href="https://github.com/gwonbe" target="_blank" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://codesandbox.io/u/gwonbe" target="_blank" title="CodeSandbox">
+                        <i class="fa-sharp fa-regular fa-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <hr>
+            
+            <!-- 게시물 검색 -->
+
+            <div id="search-box">
+                <div id="search-bar">
+                    <h2>Search</h2>
+                    <input onkeyup="filter()" type="text" id="value" placeholder="Search a Content.">
+                </div>
+                <div id="container">
+                    <div class="item">
+                        <a href="../posts/posts_2023-00-00_.html">
+                            <div class="name">
+                                <small>2023-07-08</small>
+                                <br><br>
+                                From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.
+                                <br><br>
+                                <img src="../posts/posts_2023-00-00_img.png" width="100px">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="../posts/posts_2023-00-00_.html">
+                            <div class="name">
+                                <small>2023-07-01</small>
+                                <br><br>
+                                모든 국민은 종교의 자유를 가진다. 근로조건의 기준은 인간의 존엄성을 보장하도록 법률로 정한다.
+                                <br><br>
+                                <img src="../posts/posts_2023-00-00_img_test.png" width="100px">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 하단 -->
+
+            <div id="footer">
+                개발자 : 신유진
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- 스크립트 -->
+    
+    <script type="text/javascript" src="home_script.js"></script>
+
+</body>
+
+</html>
