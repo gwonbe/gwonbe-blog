@@ -142,7 +142,6 @@ hr{
     color: black;
 }
 .name{
-    height: 200px;
     overflow: hidden;
     text-align: justify;
     vertical-align: top;
