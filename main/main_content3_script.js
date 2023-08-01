@@ -7,12 +7,12 @@ function App(){
             <div id="div3-slide-container">
                 <div id="div3-slide-album">
                     <div id="div3-slide-images">
-                        <img class="div3-img" src="main_image_portfolio1.png" alt="error"></img>
-                        <img class="div3-img" src="main_image_portfolio2.png" alt="error"></img>
-                        <img class="div3-img" src="main_image_portfolio3.png" alt="error"></img>
-                        <img class="div3-img" src="main_image_portfolio4.png" alt="error"></img>
-                        <img class="div3-img" src="main_image_portfolio5.png" alt="error"></img>
-                        <img class="div3-img" src="main_image_portfolio6.png" alt="error"></img>
+                        <img class="div3-img" src="main/main_image_portfolio1.png" alt="error"></img>
+                        <img class="div3-img" src="main/main_image_portfolio2.png" alt="error"></img>
+                        <img class="div3-img" src="main/main_image_portfolio3.png" alt="error"></img>
+                        <img class="div3-img" src="main/main_image_portfolio4.png" alt="error"></img>
+                        <img class="div3-img" src="main/main_image_portfolio5.png" alt="error"></img>
+                        <img class="div3-img" src="main/main_image_portfolio6.png" alt="error"></img>
                     </div>
                     <button id="div3-btn-l"><strong>&larr;</strong></button>
                     <button id="div3-btn-r"><strong>&rarr;</strong></button>

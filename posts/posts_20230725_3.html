@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>GWONBE</title>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/26cf5b99b8.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <style>
+        /* 전체 */
+        body{ margin: 0 auto; }
+        #body-area{ padding: 50px; text-align: center; }
+        #main{ display: inline-block; width: 70%; text-align: justify; }
+        /* 홈버튼 */
+        #homeArea{ position: fixed; top: 0px; z-index: 10; padding: 10px; font-size: 25px; }
+        #homeArea a i{ color: #E5F4F4; }
+        #homeArea a i:hover{ color: #3B9092; }
+        /* 기타 */
+        #main div{ margin: 60px 20px; }
+        table{ width: 100%; border-collapse: collapse; table-layout: fixed; }
+        th, td{ padding: 10px; border: 1px solid black; }
+        th{ text-align: center; background-color: lightcyan; }
+        .compare li{ margin: 10px;  }
+    </style>
+</head>
+
+<body>
+
+    <!-- 상단 -->
+    <div id="homeArea">
+        <a href="../home/home_index.html">
+            <i class="fa-solid fa-house-user"></i>
+        </a>
+    </div>
+
+    <!-- 메인 콘텐츠 -->
+
+    <div id="body-area">
+
+        <h1>innerText, outerText, innerHTML, outerHTML</h1>
+        <p>차례로 innerText, outerText, innerHTML, outerHTML를 비교해봅시다.</p>
+
+        <section id="main">           
+
+            <div>
+                <h2>예시 태그</h2>
+                <p id="ex" style="border: 1px solid gray; padding: 20px;">권베의 블로그에 오신 여러분 환영합니다. <br> <small style="color: red;">반가워요!</small></p>
+            </div>
+
+            <div class="compare">
+                <h2>document.write()로 비교하기</h2>
+                <ul>
+                    <script>
+                        ex = document.getElementById("ex");
+                        document.write("<li>" + ex.innerText + "</li>");
+                        document.write("<li>" + ex.outerText + "</li>");
+                        document.write("<li>" + ex.innerHTML + "</li>");
+                        document.write("<li>" + ex.outerHTML + "</li>");
+                    </script>
+                </ul>
+            </div>
+
+            <div class="compare">
+                <h2>console.log()로 비교하기</h2>
+                <p>마우스 우클릭 후 '검사'을 열어 '콘솔'을 확인하세요.</p>
+                <ul>
+                    <script>
+                        console.log(ex.innerText);
+                        console.log(ex.outerText);
+                        console.log(ex.innerHTML);
+                        console.log(ex.outerHTML);
+                    </script>
+                    <li>
+                        <pre>권베의 블로그에 오신 여러분 환영합니다.<br>반가워요!</pre>
+                    </li>
+                    <li>
+                        <pre>권베의 블로그에 오신 여러분 환영합니다.<br>반가워요!</pre>
+                    </li>
+                    <li>
+                        <xmp>권베의 블로그에 오신 여러분 환영합니다. <br> <small style="color: red;">반가워요!</small></xmp>
+                    </li>
+                    <li>
+                        <xmp><p id="ex" style="border: 1px solid gray; padding: 20px;">권베의 블로그에 오신 여러분 환영합니다. <br> <small style="color: red;">반가워요!</small></p></xmp>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="compare">
+                <h2>간단한 설명</h2>
+                <ul>
+                    <li>innerText : 해당 요소를 제외한 자손의 렌더링된 텍스트 콘텐츠를 가져온다. </li>
+                    <li>outerText : 해당 요소에 자손 태그 요소를 포함하여 텍스트 콘텐츠를 가져온다. </li>
+                    <li>innerHTML : 해당 요소의 태그를 제외한 자손 태그의 값만 가져온다.</li>
+                    <li>outerHTML : 해당 요소의 태그 값과 속성 값을 함께 가져온다.</li>
+                </ul>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- 자바스크립트 -->
+    <script src="window_resize.js"></script>
+
+    
+
+</body>
+
+</html>

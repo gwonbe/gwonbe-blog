@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>GWONBE</title>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/26cf5b99b8.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <style>
+        /* 전체 */
+        body{ margin: 0 auto; }
+        #body-area{ padding: 50px; text-align: center; }
+        #main{ display: inline-block; width: 70%; text-align: justify; }
+        /* 홈버튼 */
+        #homeArea{ position: fixed; top: 0px; z-index: 10; padding: 10px; font-size: 25px; }
+        #homeArea a i{ color: #E5F4F4; }
+        #homeArea a i:hover{ color: #3B9092; }
+        /* 기타 */
+        #body-area div{ margin: 60px 20px; }
+        table{ width: 100%; border-collapse: collapse; }
+        th, td{ padding: 15px; border: 1px solid black; }
+        th{ text-align: center; background-color: lightcyan; }
+        td{ text-align: left; }
+        h4{ text-align: center; background-color: lightyellow; padding: 30px; border: 1px dashed lightcoral; }
+    </style>
+</head>
+
+<body>
+
+    <!-- 상단 -->
+    <div id="homeArea">
+        <a href="../home/home_index.html">
+            <i class="fa-solid fa-house-user"></i>
+        </a>
+    </div>
+
+    <!-- 메인 콘텐츠 -->
+
+    <div id="body-area">
+
+        <h1>[JavaScript] Location에 대해 알아봅시다.</h1>
+
+        <section id="main">
+            <div>
+                <h2>Location 인터페이스</h2>
+                <ul>
+                    <li>Location 인터페이스는 객체가 연결된 장소(URL)를 표현한다.</li>
+                    <li>Location 인터페이스에 변경을 가하면 연결된 객체에도 반영된다.</li>
+                    <li>Document와 Window가 이런 Location을 가지고 있으며 각각 Document.location, Window.location으로 접근할 수 있다..</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Location 인터페이스의 다양한 속성과 예제</h2>
+                <table>
+                    <tr>
+                        <th>속성</th>
+                        <th>설명</th>
+                    </tr>
+                    <tr>
+                        <td>location.href</td>
+                        <td>온전한 URL을 값으로 하는 DOMString이다. 해당 주소로 이동한다.</td>
+                    </tr>
+                    <tr>
+                        <td>location.protocol</td>
+                        <td>URL의 프로토콜을 가져오는 DOMString으로, 마지막의 ':'도 포함한다.</td>
+                    </tr>
+                    <tr>
+                        <td>location.host</td>
+                        <td>URL의 호스트를 가져오는 DOMString으로 호스트명, ':', 포트번호를 포함한다.</td>
+                    </tr>
+                    <tr>
+                        <td>location.hostname</td>
+                        <td>URL의 도메인을 가져오는 DOMString이다.</td>
+                    </tr>
+                    <tr>
+                        <td>location.port</td>
+                        <td>URL의 포트 번호를 가져오는 DOMString이다.</td>
+                    </tr>
+                    <tr>
+                        <td>location.pathname</td>
+                        <td>'/' 문자 뒤 URL의 경로를 값으로 하는 DOMString이다.</td>
+                    </tr>
+                    <tr>
+                        <td>location.search</td>
+                        <td>'?' 문자 뒤 URL의 쿼리스트링을 값으로 하는 DOMString이다. 브라우저에서 URLSearchParams.get()과 URL.searchParams를 사용해서 인자를 추출할 수 있다. </td>
+                    </tr>
+                    <tr>
+                        <td>location.hash</td>
+                        <td>'#' 문자 뒤 URL의 프래그먼트 식별자를 값으로 하는 DOMString이다.</td>
+                    </tr>
+                    <tr>
+                        <td>location.username</td>
+                        <td>도메인 이름 이전에 명시된 사용자명을 값으로 하는 DOMString이다.</td>
+                    </tr>
+                    <tr>
+                        <td>location.password</td>
+                        <td>도메인 이름 이전에 명시된 비밀번호를 값으로 하는 DOMString이다.</td>
+                    </tr>
+                    <tr>
+                        <td>location.origin</td>
+                        <td>읽기 전용으로, 지정한 장소 오리진의 표준 형태를 값으로 하는 DOMString이다.</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h4>마우스 우클릭 후 '검사'을 열어 '콘솔'을 확인해보세요. <br> 해당 페이지의 location 속성을 확인할 수 있습니다.</h4>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- 자바스크립트 -->
+    <script src="window_resize.js"></script>
+    <script>
+        console.log("location.href : " + location.href);
+        console.log("location.protocol : " + location.protocol);
+        console.log("location.host : " + location.host);
+        console.log("location.hostname : " + location.hostname);
+        console.log("location.port : " + location.port);
+        console.log("location.pathname : " + location.pathname);
+        console.log("location.search : " + location.search);
+        console.log("location.hash : " + location.hash);
+        console.log("location.username : " + location.username);
+        console.log("location.password : " + location.password);
+        console.log("location.origin : " + location.origin);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>GWONBE</title>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/26cf5b99b8.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <style>
+        /* 전체 */
+        body{ margin: 0 auto; }
+        #body-area{ padding: 50px; text-align: center; }
+        #main{ display: inline-block; width: 70%; text-align: justify; }
+        /* 홈버튼 */
+        #homeArea{ position: fixed; top: 0px; z-index: 10; padding: 10px; font-size: 25px; }
+        #homeArea a i{ color: #E5F4F4; }
+        #homeArea a i:hover{ color: #3B9092; }
+        /* 기타 */
+        #main div{ margin: 60px 20px; }
+        table{ width: 100%; border-collapse: collapse; table-layout: fixed; }
+        th, td{ padding: 10px; border: 1px solid black; }
+        th{ text-align: center; background-color: lightcyan; }
+    </style>
+</head>
+
+<body>
+
+    <!-- 상단 -->
+    <div id="homeArea">
+        <a href="../home/home_index.html">
+            <i class="fa-solid fa-house-user"></i>
+        </a>
+    </div>
+
+    <!-- 메인 콘텐츠 -->
+
+    <div id="body-area">
+
+        <h1>[HTML] 특수문자 코드 정리</h1>
+
+        <section id="main">
+
+            <div>
+                <table>
+                    <tr> <th>특수문자</th> <th>이름</th> <th>코드</th> </tr>
+                    <tr> <td>&#40; &#41;</td> <td>소괄호</td> <td><xmp>&#40; &#41;</xmp></td> </tr>
+                    <tr> <td>&#123; &#125;</td> <td>중괄호</td> <td><xmp>&#123; &#125;</xmp></td> </tr>
+                    <tr> <td>&#91; &#93;</td> <td>대괄호</td> <td><xmp>&#91; &#93;</xmp></td> </tr>
+                    <tr> <td>&lt; &gt;</td> <td>꺽쇠</td> <td><xmp>&lt; &gt;</xmp></td> </tr>
+                    <tr> <td>&quot; &quot;</td> <td>큰 따옴표</td> <td><xmp>&quot; &quot;</xmp></td> </tr>
+                    <tr> <td>&apos; &apos;</td> <td>작은 따옴표</td> <td><xmp>&apos; &apos;</xmp></td> </tr>
+                </table>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- 자바스크립트 -->
+    <script src="window_resize.js"></script>
+
+</body>
+
+</html>

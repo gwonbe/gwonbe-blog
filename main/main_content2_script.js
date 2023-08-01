@@ -7,7 +7,7 @@ function App(){
             <table id="div2-table">
                 <tr>
                     <td id="div2-image-td">
-                        <img src="main_image_profile.png"></img>
+                        <img src="main/main_image_profile.png"></img>
                     </td>
                     <td>
                         <table id="div2-information-table">

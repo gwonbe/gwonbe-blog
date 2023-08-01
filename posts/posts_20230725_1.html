@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>GWONBE</title>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/26cf5b99b8.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <style>
+        /* 전체 */
+        body{ margin: 0 auto; }
+        #body-area{ padding: 50px; text-align: center; }
+        #main{ display: inline-block; width: 70%; text-align: justify; }
+        /* 홈버튼 */
+        #homeArea{ position: fixed; top: 0px; z-index: 10; padding: 10px; font-size: 25px; }
+        #homeArea a i{ color: #E5F4F4; }
+        #homeArea a i:hover{ color: #3B9092; }
+        /* 기타 */
+        #body-area div{ margin: 60px 20px; }
+        table{ width: 100%; border-collapse: collapse; table-layout: fixed; }
+        th, td{ padding: 10px; border: 1px solid black; }
+        th{ text-align: center; background-color: lightcyan; }
+        li{ line-height: 40px; }
+        p{ padding: 40px 0px; }
+        img{ width: 100%; }
+    </style>
+</head>
+
+<body>
+
+    <!-- 상단 -->
+
+    <div id="homeArea">
+        <a href="../home/home_index.html">
+            <i class="fa-solid fa-house-user"></i>
+        </a>
+    </div>
+
+    <!-- 메인 콘텐츠 -->
+
+    <div id="body-area">
+
+        <h1>[JSP] isErrorPage와 errorPage에 대하여</h1>
+
+        <section id="main">
+
+            <div>
+                <h1>개념</h1>
+                <ul>
+                    <li>
+                        isErrorPage 속성
+                        <ul>
+                            <li>JSP 페이지가 오류를 처리하는 페이지인지 true 또는 false로 지정하는 속성</li>
+                            <li>지정하지 않으면 기본값이 false이고 필요하면 true로 지정</li>
+                            <li><%@ page isErrorPage="true" %>를 작성</li>
+                            <li>isErrorPage를 true로 지정하면 내장객체라 부르는 exception 변수를 사용하여 에러를 처리</li>
+                        </ul>
+                    </li>
+                    <li>
+                        errorPage 속성
+                        <ul>
+                            <li>JSP 페이지에서 발생한 오류를 처리하는 JSP 페이지를 기술하는 방법</li>
+                            <li><%@ page errorPage="오류 처리 파일명" %>를 작성하여 사용</li>
+                            <li>오류를 처리하는 전담 JSP 페이지를 지정</li>
+                            <li>이 시스템을 사용하는 사용자에게 일관성 있게 오류 처리를 해줄 수 있어 시스템의 신뢰성을 높일 수 있는 장점</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+<div>
+<h1>예제 코드</h1>
+<table>
+<tr>
+<th>
+exception.jsp
+</th>
+<th>
+main.jsp
+</th>
+</tr>
+<tr>
+<td>
+<xmp>
+<%@ page isErrorPage="true" %>
+<h1>처리 중 문제 발생</h1>
+<h3>빠른 시일 내에 복구하겠습니다.</h3>
+<p>exception.getMessage() : <%= exception.getMessage() %></p>
+<p>exception.toString() : <%= exception.toString() %></p>
+</xmp>
+</td>
+<td>
+<xmp>
+<%@ page errorPage="exception.jsp" %>
+<%! String[] arr = {"안녕하세요.", "반갑습니다."}; %>
+<p><%= arr[0] %></p>
+<p><%= arr[1] %></p>
+<p><%= arr[2] %></p>
+</xmp>
+</td>
+</tr>
+</table>
+<p class="p">이제 main.jsp를 실행하면 오류가 발생하여 exception.jsp가 화면에 나올 것이다.</p>
+<img src="posts_20230725_1_img.jpg">
+</div>
+
+        </section>
+
+    </div>
+
+    <!-- 자바스크립트 -->
+    <script src="window_resize.js"></script>
+
+</body>
+
+</html>

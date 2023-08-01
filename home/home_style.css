@@ -1,7 +1,6 @@
 /* color space 기준 : #DBDBDB */
 
 /* 전체 */
-
 @font-face {
     font-family: 'Binggrae-Two';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff');
@@ -28,7 +27,6 @@ hr{
 }
 
 /* 홈 버튼 */
-
 #homeArea{
     position: fixed;
     top: 0px;
@@ -44,7 +42,6 @@ hr{
 }
 
 /* 스크롤 버튼 */
-
 #buttonArea{
     position: fixed;
     bottom: 30px;
@@ -63,7 +60,6 @@ hr{
 }
 
 /* 제목 */
-
 #home-title-div{
     padding: 30px 0px;
     background-color: #343434;
@@ -75,7 +71,6 @@ hr{
 }
 
 /* 포트폴리오 사이트 */
-
 #mypages{
     width: 100%;
     vertical-align: top;
@@ -98,7 +93,6 @@ hr{
 }
 
 /* 게시물 검색 */
-
 #search-box{
     width: 100%;
     vertical-align: top;
@@ -148,7 +142,6 @@ hr{
 }
 
 /* 하단 */
-
 #footer{
     padding: 100px 0px 20px 0px;
     font-family: 'Binggrae-Two';

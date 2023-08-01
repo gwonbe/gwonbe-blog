@@ -1,74 +1,53 @@
 <!DOCTYPE html>
-
 <html>
-
   <head>
     <title>GWONBE</title>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="#">
-    <link rel="stylesheet" href="main_style.css">
+    <link rel="stylesheet" href="main/main_style.css">
     <script src="https://kit.fontawesome.com/26cf5b99b8.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
-
   <body>
-
     <div id="point-header"></div>
-
     <!-- 상단 -->
     <div id="homeArea">
       <a title="Go to the blog!" href="home/home_index.html"><i class="fa-solid fa-house-user"></i></a>
     </div>
-
     <!-- 본문 -->
-    <div id="div1" class="div">
-    </div>
-    <div id="div2" class="div">
-    </div>
-    <div id="div3" class="div">
-    </div>
-    <div id="div4" class="div">
-    </div>
-
+    <div id="div1" class="div"></div>
+    <div id="div2" class="div"></div>
+    <div id="div3" class="div"></div>
+    <div id="div4" class="div"></div>
     <!-- 하단 -->
     <div id="point-footer"></div>
-
     <!-- 스크롤 버튼 -->
     <div id="buttonArea">
       <i id="scroll-up"class="fa-solid fa-circle-up"></i>
       <i id="scroll-down" class="fa-solid fa-circle-down"></i>
     </div>
-
     <!-- 자바스크립트 -->
-
     <script>
-
       areaH = document.getElementById("point-header");
       areaF = document.getElementById("point-footer");
       btnU = document.getElementById("scroll-up");
       btnD = document.getElementById("scroll-down");
-
       function moveToTop(){
         areaH.scrollIntoView({behavior:"smooth"});
       }
       function moveToBottom(){
         areaF.scrollIntoView({behavior:"smooth"});
       }
-
       btnU.addEventListener("click", moveToTop);
       btnD.addEventListener("click", moveToBottom);
-
     </script>
-
     <!-- 자바스크립트 파일 -->
-    <script src="main_content1_script.js" type="text/babel"></script>
-    <script src="main_content2_script.js" type="text/babel"></script>
-    <script src="main_content3_script.js" type="text/babel"></script>
-    <script src="main_content4_script.js" type="text/babel"></script>
-
+    <script src="main/main_content1_script.js" type="text/babel"></script>
+    <script src="main/main_content2_script.js" type="text/babel"></script>
+    <script src="main/main_content3_script.js" type="text/babel"></script>
+    <script src="main/main_content4_script.js" type="text/babel"></script>
   </body>
-
 </html>
