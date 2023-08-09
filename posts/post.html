@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>GWONBE</title>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/26cf5b99b8.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <style>
+        /* 전체 */
+        body{ margin: 0 auto; }
+        #body-area{ padding: 50px; text-align: center; }
+        #main{ display: inline-block; width: 70%; text-align: justify; }
+        /* 홈버튼 */
+        #homeArea{ position: fixed; top: 0px; z-index: 10; padding: 10px; font-size: 25px; }
+        #homeArea a i{ color: #E5F4F4; }
+        #homeArea a i:hover{ color: #3B9092; }
+        /* 기타 */
+    </style>
+</head>
+
+<body>
+
+    <!-- 상단 -->
+
+    <div id="homeArea">
+        <a href="../home/home_index.html">
+            <i class="fa-solid fa-house-user"></i>
+        </a>
+    </div>
+
+    <!-- 메인 콘텐츠 -->
+
+    <div id="body-area">
+
+        <h1>제목</h1>
+
+        <section id="main">
+        </section>
+
+    </div>
+
+    <script>
+        $(window).ready(function(){
+            $(window).resize(function(){
+                if(window.innerWidth <= 500){
+                    $('#body-area').css('padding', '20px');
+                    $('#main').css('width', '100%');
+                }else if(window.innerWidth <= 800){
+                    $('#body-area').css('padding', '30px');
+                    $('#main').css('width', '90%');
+                }else if(window.innerWidth <= 1100){
+                    $('#body-area').css('padding', '40px');
+                    $('#main').css('width', '80%');
+                }else{
+                    $('#body-area').css('padding', '50px');
+                    $('#main').css('width', '70%');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
