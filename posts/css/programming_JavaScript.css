@@ -10,8 +10,10 @@ th{
     text-align: center; background-color: lightcyan;
 }
 
-/* post : innerText, outerText, innerHTML, outerHTML */
+/* 클래스별 */
 
-#post-about-innerouter ul li{
-    line-height: 30px;
+.tip{
+    border: 2px dashed red;
+    background-color: lightyellow;
+    padding: 20px;
 }
