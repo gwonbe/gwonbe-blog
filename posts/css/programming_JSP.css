@@ -1,0 +1,17 @@
+/* 전체 - 표 */
+
+table{
+    width: 100%; border-collapse: collapse;
+}
+th, td{
+    padding: 10px; border: 1px solid black;
+}
+th{
+    text-align: center; background-color: lightcyan;
+}
+
+/* isErrorPage & errorPage */
+
+#post-about-error ul li{
+    line-height: 40px;
+}

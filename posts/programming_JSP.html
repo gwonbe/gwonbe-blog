@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>GWONBE</title>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/26cf5b99b8.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="css/post_style.css">
+    <link rel="stylesheet" href="css/programming_JSP.css"></link>
+</head>
+
+<body>
+
+    <!-- 상단 -->
+
+    <div id="homeArea">
+        <a href="../home/home_index.html">
+            <i class="fa-solid fa-house-user"></i>
+        </a>
+    </div>
+
+    <!-- 스크롤 버튼 -->
+
+    <div id="buttonArea">
+        <i id="scroll-up"class="fa-solid fa-circle-up"></i>
+        <i id="scroll-down" class="fa-solid fa-circle-down"></i>
+    </div>
+
+    <!-- 메뉴바 -->
+    
+    <div id="menubar">
+        <ol>
+            <a href="#post-about-script-tag"><li>스크립트 태그</li></a>
+            <a href="#post-about-jsp-date"><li>JAVA를 이용해 현재 날짜 구하기</li></a>
+            <a href="#post-about-error"><li>isErrorPage & errorPage</li></a>
+        </ol>
+    </div>
+
+    <!-- 메인 콘텐츠 -->
+
+    <div id="body-area">
+
+        <h1>JSP 정리</h1>
+
+        <section id="main">
+        
+            <div id="post-about-script-tag">
+                <h2>스크립트 태그</h2>
+                <ul>
+                    <li>JSP 페이지가 서블릿 프로그램에서 서블릿 클래스로 변환할 때 적용한다.</li>
+                    <li>JSP 컨테이너가 자바 코드가 삽입되어 있는 스크립트 태그를 처리하고 나머지는 HTML 코드나 일반 텍스트로 간주한다.</li>
+                </ul>
+                <h2>스크립트 태그의 종류</h2>
+                <table>
+                    <tr>
+                        <th>종류</th>
+                        <th>태그 형식</th>
+                        <th>사용 용도</th>
+                    </tr>
+                    <tr>
+                        <td>지시어 (directives)</td>
+                        <td><%@    %></td>
+                        <td>JSP 페이지의 속성을 지정</td>
+                    </tr>
+                    <tr>
+                        <td>선언 (declaration)</td>
+                        <td><%!    %></td>
+                        <td>소속 변수 선언과 메소드 정의</td>
+                    </tr>
+                    <tr>
+                        <td>표현식 (expression)</td>
+                        <td><%=    %></td>
+                        <td>변수, 계산식, 함수 호출 결과를 문자열 형태로 출력</td>
+                    </tr>
+                    <tr>
+                        <td>스크립트릿 (scriptlet)</td>
+                        <td><%     %></td>
+                        <td>JAVA 코드를 기술</td>
+                    </tr>
+                    <tr>
+                        <td>주석 (comments)</td>
+                        <td><%--   --%></td>
+                        <td>JSP 페이지의 설명 추가</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="post-about-jsp-date">
+                <h2>JAVA 문법을 통해 현재 날짜 구하기</h2>
+                <table>
+                    <tr>
+                        <th>코드</th>
+                        <th>결과</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%= new java.util.Date() %>
+                        </td>
+                        <td>
+                            Mon Jul 24 13:29:33 KST 2023
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%@ page import="java.util.Date" %><br>
+                            현재 시각 : <%= new Date().toLocaleString() %>
+                        </td>
+                        <td>
+                            현재 시각 : 2023. 7. 24. 오후 1:27:12
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%@ page import="java.time.LocalDate" %><br>
+                            <%! LocalDate now = LocalDate.now(); %><br>
+                            <%= now %>
+                        </td>
+                        <td>
+                            2023-07-24
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%@ page import="java.time.LocalDate" %><br>
+                            <%@ page import="java.time.format.DateTimeFormatter" %><br>
+                            <%! LocalDate now = LocalDate.now(); %><br>
+                            <%! DateTimeFormatter formatter = DateTimeFormatter.ofPattern("YYYY/MM/dd"); %><br>
+                            <%! String formatedNow = now.format(formatter); %><br>
+                            <%= formatedNow %>
+                        </td>
+                        <td>
+                            2023/07/24
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="post-about-error">
+                <h2>isErrorPage & errorPage</h2>
+                <ul>
+                    <li>
+                        isErrorPage 속성
+                        <ul>
+                            <li>JSP 페이지가 오류를 처리하는 페이지인지 true 또는 false로 지정하는 속성</li>
+                            <li>지정하지 않으면 기본값이 false이고 필요하면 true로 지정</li>
+                            <li><%@ page isErrorPage="true" %>를 작성</li>
+                            <li>isErrorPage를 true로 지정하면 내장객체라 부르는 exception 변수를 사용하여 에러를 처리</li>
+                        </ul>
+                    </li>
+                    <li>
+                        errorPage 속성
+                        <ul>
+                            <li>JSP 페이지에서 발생한 오류를 처리하는 JSP 페이지를 기술하는 방법</li>
+                            <li><%@ page errorPage="오류 처리 파일명" %>를 작성하여 사용</li>
+                            <li>오류를 처리하는 전담 JSP 페이지를 지정</li>
+                            <li>이 시스템을 사용하는 사용자에게 일관성 있게 오류 처리를 해줄 수 있어 시스템의 신뢰성을 높일 수 있는 장점</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h1>예제 코드</h1>
+<table>
+<tr>
+<th>
+exception.jsp
+</th>
+<th>
+main.jsp
+</th>
+</tr>
+<tr>
+<td>
+<xmp>
+<%@ page isErrorPage="true" %>
+<h1>처리 중 문제 발생</h1>
+<h3>빠른 시일 내에 복구하겠습니다.</h3>
+<p>exception.getMessage() : <%= exception.getMessage() %></p>
+<p>exception.toString() : <%= exception.toString() %></p>
+</xmp>
+</td>
+<td>
+<xmp>
+<%@ page errorPage="exception.jsp" %>
+<%! String[] arr = {"안녕하세요.", "반갑습니다."}; %>
+<p><%= arr[0] %></p>
+<p><%= arr[1] %></p>
+<p><%= arr[2] %></p>
+</xmp>
+</td>
+</tr>
+</table>
+                <p style="padding: 15px 0px;">이제 main.jsp를 실행하면 오류가 발생하여 exception.jsp가 화면에 출력된다.</p>
+                <img style="border: 1px solid black;" src="media/programming_JSP_post-about-error.jpg">
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- 하단 -->
+
+    <div id="footer"></div>
+
+    <!-- 스크립트 -->
+
+    <script src="js/post_script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>GWONBE</title>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/26cf5b99b8.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="css/post_style.css">
+    <link rel="stylesheet" href="css/programming_HTML.css">
+</head>
+
+<body>
+
+    <!-- 상단 -->
+
+    <div id="homeArea">
+        <a href="../home/home_index.html">
+            <i class="fa-solid fa-house-user"></i>
+        </a>
+    </div>
+
+    <!-- 스크롤 버튼 -->
+
+    <div id="buttonArea">
+        <i id="scroll-up"class="fa-solid fa-circle-up"></i>
+        <i id="scroll-down" class="fa-solid fa-circle-down"></i>
+    </div>
+
+    <!-- 메뉴바 -->
+
+    <div id="menubar">
+        <ol>
+            <a href="#post-about-special-characters"><li>특수 문자 코드 정리</li></a>
+            <a href="#post-about-innerouter"><li>innerText, outerText, <br> innerHTML, outerHTML</li></a>
+        </ol>
+    </div>
+
+    <!-- 메인 콘텐츠 -->
+
+    <div id="body-area">
+
+        <h1>HTML 정리</h1>
+
+        <section id="main">
+
+            <div id="post-about-special-characters">
+                <h2>HTML 특수문자 코드 정리</h2>
+                <table>
+                    <tr> <th>특수문자</th> <th>이름</th> <th>코드</th> </tr>
+                    <tr> <td>&#40; &#41;</td> <td>소괄호</td> <td><xmp>&#40; &#41;</xmp></td> </tr>
+                    <tr> <td>&#123; &#125;</td> <td>중괄호</td> <td><xmp>&#123; &#125;</xmp></td> </tr>
+                    <tr> <td>&#91; &#93;</td> <td>대괄호</td> <td><xmp>&#91; &#93;</xmp></td> </tr>
+                    <tr> <td>&lt; &gt;</td> <td>꺽쇠</td> <td><xmp>&lt; &gt;</xmp></td> </tr>
+                    <tr> <td>&quot; &quot;</td> <td>큰 따옴표</td> <td><xmp>&quot; &quot;</xmp></td> </tr>
+                    <tr> <td>&apos; &apos;</td> <td>작은 따옴표</td> <td><xmp>&apos; &apos;</xmp></td> </tr>
+                </table>
+            </div>
+            
+            <hr>
+            <h2>HTML Element</h2>
+
+            <div id="post-about-innerouter">
+
+                <h2>📍 innerText, outerText, innerHTML, outerHTML</h2>
+                <p>차례로 innerText, outerText, innerHTML, outerHTML를 비교해봅시다.</p>
+
+                <h3>예시 태그</h3>
+                <p>아래 태그는 비교를 위한 태그이다.</p>
+                <p id="post-about-element-ex" style="border: 1px solid gray; padding: 20px;"> 권베의 블로그에 오신 여러분 환영합니다. <br> <small style="color: red;">반가워요!</small> </p>
+
+                <h3>document.write()로 비교하기</h3>
+                <p>차례로 innerText, outerText, innerHTML, outerHTML의 결과이다.</p>
+                <ul>
+                    <script>
+                        ex = document.getElementById("post-about-element-ex");
+                        document.write("<li>" + ex.innerText + "</li>");
+                        document.write("<li>" + ex.outerText + "</li>");
+                        document.write("<li>" + ex.innerHTML + "</li>");
+                        document.write("<li>" + ex.outerHTML + "</li>");
+                    </script>
+                </ul>
+
+                <h3>console.log()로 비교하기</h3>
+                <p>결과는 다음과 같다.</p>
+                <ul>
+                    <li>
+                        <pre>권베의 블로그에 오신 여러분 환영합니다.<br>반가워요!</pre>
+                    </li>
+                    <li>
+                        <pre>권베의 블로그에 오신 여러분 환영합니다.<br>반가워요!</pre>
+                    </li>
+                    <li>
+                        <xmp>권베의 블로그에 오신 여러분 환영합니다. <br> <small style="color: red;">반가워요!</small></xmp>
+                    </li>
+                    <li>
+                        <xmp><p id="post-about-element-ex" style="border: 1px solid gray; padding: 20px;">권베의 블로그에 오신 여러분 환영합니다. <br> <small style="color: red;">반가워요!</small></p></xmp>
+                    </li>
+                </ul>
+
+                <h3>간단한 설명</h3>
+                <ul>
+                    <li>innerText : 해당 요소를 제외한 자손의 렌더링된 텍스트 콘텐츠를 가져온다. </li>
+                    <li>outerText : 해당 요소에 자손 태그 요소를 포함하여 텍스트 콘텐츠를 가져온다. </li>
+                    <li>innerHTML : 해당 요소의 태그를 제외한 자손 태그의 값만 가져온다.</li>
+                    <li>outerHTML : 해당 요소의 태그 값과 속성 값을 함께 가져온다.</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- 하단 -->
+
+    <div id="footer"></div>
+
+    <!-- 스크립트 -->
+
+    <script src="js/post_script.js"></script>
+
+</body>
+
+</html>
