@@ -2,6 +2,5 @@
 
 #post-about-basic img{
     width: 100%;
-    background-color: honeydew;
-    padding: 3%;
+    border: 1px solid black;
 }

@@ -1,3 +1,20 @@
+/* 스크롤 버튼 */
+
+areaH = document.getElementById("body-area");
+areaF = document.getElementById("footer");
+btnU = document.getElementById("scroll-up");
+btnD = document.getElementById("scroll-down");
+
+function moveToTop(){
+    areaH.scrollIntoView({behavior:"smooth"});
+}
+function moveToBottom(){
+    areaF.scrollIntoView({behavior:"smooth"});
+}
+
+btnU.addEventListener("click", moveToTop);
+btnD.addEventListener("click", moveToBottom);
+
 /* jQuery : resize 이벤트 */
 
 $(window).ready(function(){
@@ -24,20 +41,3 @@ $(window).ready(function(){
         }
     });
 });
-
-/* 스크롤 버튼 */
-
-areaH = document.getElementById("body-area");
-areaF = document.getElementById("footer");
-btnU = document.getElementById("scroll-up");
-btnD = document.getElementById("scroll-down");
-
-function moveToTop(){
-    areaH.scrollIntoView({behavior:"smooth"});
-}
-function moveToBottom(){
-    areaF.scrollIntoView({behavior:"smooth"});
-}
-
-btnU.addEventListener("click", moveToTop);
-btnD.addEventListener("click", moveToBottom);

@@ -1,12 +1,27 @@
-/* 게시물 검색 */
+/* 스크롤 버튼 */
 
-container = document.getElementById("container");
+areaH = document.getElementById("body-area");
+areaF = document.getElementById("footer");
+btnU = document.getElementById("scroll-up");
+btnD = document.getElementById("scroll-down");
+
+function moveToTop(){
+    areaH.scrollIntoView({behavior:"smooth"});
+}
+function moveToBottom(){
+    areaF.scrollIntoView({behavior:"smooth"});
+}
+
+btnU.addEventListener("click", moveToTop);
+btnD.addEventListener("click", moveToBottom);
+
+/* 게시물 검색 */
 
 function filter(){
     var value, name, item, i;
     value = document.getElementById("value").value.toUpperCase();
     item = document.getElementsByClassName("item");
-    for(i=0;i<item.length;i++){
+    for(i=0; i<item.length; i++){
         name = item[i].getElementsByClassName("name");
         if(name[0].innerHTML.toUpperCase().indexOf(value) > -1) item[i].style.display = "flex";
         else item[i].style.display = "none";
@@ -32,20 +47,3 @@ $(window).ready(function(){
         }
     });
 });
-
-/* 스크롤 버튼 */
-
-areaH = document.getElementById("body-area");
-areaF = document.getElementById("footer");
-btnU = document.getElementById("scroll-up");
-btnD = document.getElementById("scroll-down");
-
-function moveToTop(){
-    areaH.scrollIntoView({behavior:"smooth"});
-}
-function moveToBottom(){
-    areaF.scrollIntoView({behavior:"smooth"});
-}
-
-btnU.addEventListener("click", moveToTop);
-btnD.addEventListener("click", moveToBottom);
