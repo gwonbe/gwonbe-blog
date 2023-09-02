@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>GWONBE</title>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/26cf5b99b8.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="css/post_style.css">
+    <link rel="stylesheet" href="css/study_Eclipse.css">
+</head>
+
+<body>
+
+    <!-- 상단 -->
+
+    <div id="homeArea">
+        <a href="../home/home_index.html">
+            <i class="fa-solid fa-house-user"></i>
+        </a>
+    </div>
+
+    <!-- 스크롤 버튼 -->
+
+    <div id="buttonArea">
+        <i id="scroll-up"class="fa-solid fa-circle-up"></i>
+        <i id="scroll-down" class="fa-solid fa-circle-down"></i>
+    </div>
+
+    <!-- 메뉴바 -->
+
+    <div id="menubar">
+        <ol>
+            <a href="#post-about-connecting-apache-tomcat"><li>Apache Tomcat 연동</li></a>
+            <a href="#post-about-change-encoding-to-utf-8"><li>UTF-8 설정</li></a>
+        </ol>
+    </div>
+
+    <!-- 메인 콘텐츠 -->
+
+    <div id="body-area">
+
+        <h1>Eclipse 정리</h1>
+
+        <section id="main">
+
+            <div id="post-about-connecting-apache-tomcat">
+                <h2>Eclipse에서 Apache Tomcat 연동하기</h2>
+                <ol>
+                    <li>
+                        아파치 톰캣 설치하기
+                        <p>
+                            찾기 쉽도록 로컬디스크C 하위에 저장하기
+                        </p>
+                    </li>
+                    <li>
+                        아파치 톰캣 경로 지정하기
+                        <p>
+                            이클립스에서 window > Preferences > Server > Runtime Environment 들어가기<br>
+                            Add 클릭해서 Apache 폴더에서 버전 선택 후 Next 누르기<br>
+                            Browse 클릭해서 C:\apache-tomcat-9.0.70 경로 설정한 후 Finish 누르기
+                        </p>
+                    </li>
+                    <li>
+                        아파치 톰캣 선택하기
+                        <p>
+                            프로젝트 우클릭 후 Properties 들어가기<br>
+                            Java Build Path > Libraries > Add Library 들어가기<br>
+                            Server Runtime 선택 후 나오는 아파치 톰캣 선택하기
+                        </p>
+                    </li>
+                </ol>
+            </div>
+
+            <div id="post-about-change-encoding-to-utf-8">
+                <h2>UTF-8로 인코딩 설정하기</h2>
+                <ol>
+                    <li>window > Preferences > Web 들어가기</li>
+                    <li>CSS Files, HTML Files, JSP Files 인코딩 UTF-8로 바꾸기</li>
+                    <li>XML > XML Files 인코딩 UTF-8로 바꾸기</li>
+                </ol>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- 하단 -->
+
+    <div id="footer"></div>
+
+    <!-- 스크립트 -->
+
+    <script src="js/post_script.js"></script>
+
+</body>
+
+</html>
