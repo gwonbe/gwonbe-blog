@@ -10,7 +10,7 @@ th{
     text-align: center; background-color: lightcyan;
 }
 
-/* post : innerText, outerText, innerHTML, outerHTML */
+/* POST : innerText, outerText, innerHTML, outerHTML */
 
 #post-about-innerouter ul li{
     line-height: 30px;
