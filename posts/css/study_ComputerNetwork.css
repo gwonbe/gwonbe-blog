@@ -1,0 +1,21 @@
+/* POST : [ URI & URL & URN ] 비교하기 */
+
+#post-about-explane-uri-url-urn a{
+    text-decoration: none;
+    background-color: lavender;
+    padding: 0px 10px 0px 10px;
+}
+#post-about-explane-uri-url-urn li{
+    line-height: 40px;
+}
+#post-about-explane-uri-url-urn-head{
+    padding: 10px 60px;
+    background-color: lavenderblush;
+}
+#post-about-explane-uri-url-urn-head li{
+    list-style: none;
+    font-size: 20px;
+}
+#post-about-explane-uri-url-urn-explanation li{
+    font-size: 18px;
+}
