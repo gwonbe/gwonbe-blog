@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/26cf5b99b8.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <link rel="stylesheet" href="css/post_style.css">
+    <link rel="stylesheet" href="css/study_CSS.css">
 </head>
 
 <body>
@@ -31,9 +32,7 @@
 
     <div id="menubar">
         <ol>
-            <a href="#"><li></li></a>
-            <a href="#"><li></li></a>
-            <a href="#"><li></li></a>
+            <a href="#post-about-align-container"><li>수평 수직 정렬</li></a>
         </ol>
     </div>
 
@@ -41,12 +40,45 @@
 
     <div id="body-area">
 
-        <h1>제목</h1>
+        <h1>CSS 정리</h1>
 
         <section id="main">
 
-            <div>
-                <h2>콘텐츠 위치 화면 가운데로 설정하기</h2>
+            <div id="post-about-align-container">
+                <h2>수평 수직 정렬</h2>
+                <p>화면의 정가운데에 콘텐츠를 표시해보자.</p>
+                <img src="media/study_CSS_post-about-align-container_img.png">
+                <p>위와 같이 화면 크기가 변해도 콘텐츠를 수평 수직 정렬해주는 코드는 다음과 같다.</p>
+                <table>
+                    <tr>
+                        <th>HTML</th>
+                        <th>CSS</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <xmp>
+<div id="container">
+    <h1>Hello</h1>
+    <h1>World</h1>
+</div>
+                            </xmp>
+                        </td>
+                        <td>
+                            <xmp>
+#container{
+    width: 300px;
+    background-color: lavender;
+    /* 수평 수직 정렬 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+                            </xmp>
+                        </td>
+                    </tr>
+                </table>
             </div>
 
         </section>
