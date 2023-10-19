@@ -33,7 +33,6 @@
     <div id="menubar">
         <ol>
             <a href="#post-about-script-tag"><li>스크립트 태그</li></a>
-            <a href="#post-about-jsp-date"><li>JAVA를 이용해 현재 날짜 구하기</li></a>
             <a href="#post-about-error"><li>isErrorPage & errorPage</li></a>
         </ol>
     </div>
@@ -83,56 +82,6 @@
                         <td>주석 (comments)</td>
                         <td><%--   --%></td>
                         <td>JSP 페이지의 설명 추가</td>
-                    </tr>
-                </table>
-            </div>
-
-            <div id="post-about-jsp-date">
-                <h2>JAVA 문법을 통해 현재 날짜 구하기</h2>
-                <table>
-                    <tr>
-                        <th>코드</th>
-                        <th>결과</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <%= new java.util.Date() %>
-                        </td>
-                        <td>
-                            Mon Jul 24 13:29:33 KST 2023
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <%@ page import="java.util.Date" %><br>
-                            현재 시각 : <%= new Date().toLocaleString() %>
-                        </td>
-                        <td>
-                            현재 시각 : 2023. 7. 24. 오후 1:27:12
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <%@ page import="java.time.LocalDate" %><br>
-                            <%! LocalDate now = LocalDate.now(); %><br>
-                            <%= now %>
-                        </td>
-                        <td>
-                            2023-07-24
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <%@ page import="java.time.LocalDate" %><br>
-                            <%@ page import="java.time.format.DateTimeFormatter" %><br>
-                            <%! LocalDate now = LocalDate.now(); %><br>
-                            <%! DateTimeFormatter formatter = DateTimeFormatter.ofPattern("YYYY/MM/dd"); %><br>
-                            <%! String formatedNow = now.format(formatter); %><br>
-                            <%= formatedNow %>
-                        </td>
-                        <td>
-                            2023/07/24
-                        </td>
                     </tr>
                 </table>
             </div>

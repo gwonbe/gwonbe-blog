@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/26cf5b99b8.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <link rel="stylesheet" href="css/post_style.css">
+    <link rel="stylesheet" href="css/study_Java.css">
 </head>
 
 <body>
@@ -32,6 +33,7 @@
     <div id="menubar">
         <ol>
             <a href="#post-about-explane-jdk-jre"><li>JDK & JRE</li></a>
+            <a href="#post-about-date"><li>현재 날짜 구하기</li></a>
         </ol>
     </div>
 
@@ -63,6 +65,67 @@
                         </ul>
                     </li>
                 </ul>
+            </div>
+
+            <div id="post-about-date">
+
+                <h2>현재 날짜 구하기</h2>
+
+                <h3>코드</h3>
+
+<xmp>
+
+    import java.util.Date;
+    import java.time.LocalDate;
+    import java.time.format.DateTimeFormatter;
+    
+    public class Test {
+    
+        public static void main(String[] args) {
+            
+            // import nothing!
+            System.out.println("\n[01] ------------------------");
+            System.out.println(new java.util.Date());
+            
+            // import java.util.Date;
+            System.out.println("\n[02] ------------------------");
+            System.out.println(new Date().toLocaleString());
+            
+            // import java.time.LocalDate;
+            System.out.println("\n[03] ------------------------");
+            System.out.println(LocalDate.now());
+            
+            // import java.time.LocalDate; import java.time.format.DateTimeFormatter;
+            System.out.println("\n[04] ------------------------");
+            LocalDate now = LocalDate.now();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("YYYY/MM/dd");
+            String formatedNow = now.format(formatter);
+            System.out.println(formatedNow);
+            
+        }
+    
+    }
+    
+</xmp>
+
+                <h3>결과</h3>
+
+<xmp>
+    
+[01] ------------------------
+Thu Oct 19 09:33:24 KST 2023
+
+[02] ------------------------
+2023. 10. 19. 오전 9:33:24
+
+[03] ------------------------
+2023-10-19
+
+[04] ------------------------
+2023/10/19
+
+</xmp>
+
             </div>
 
         </section>
